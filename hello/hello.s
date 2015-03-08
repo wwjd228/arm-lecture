@@ -6,7 +6,7 @@ _start: .global _start
 	mov r0, #1 @ fd <- stdout
 	adr r1, msg @ pstr <- *msg
 	mov r2, #14 @ len <- 14
-	mov r7, #4 @ syscall <- sys_write
+	mov r7, #0x04 @ syscall <- sys_write
 	swi 0 @ system call
 
 @ sys_exit ( exitcode )
